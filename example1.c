@@ -28,7 +28,7 @@ typedef struct s
 }
 STACK;
 
-NODE *createNode(int x)
+NODE* createNode(int x)
 {
     NODE *newNode = (NODE *) malloc(sizeof(NODE));
     newNode->data = x;
@@ -48,7 +48,7 @@ void addEdge(GRAPH *graph , int src , int dest)
     graph->head[dest] = newNode;
 }
 
-GRAPH *createGraph(int v)
+GRAPH* createGraph(int v)
 {
     GRAPH *graph = (GRAPH *) malloc(sizeof(GRAPH));
     graph->vertices = v;
@@ -64,7 +64,7 @@ GRAPH *createGraph(int v)
     return graph;
 }
 
-STACK *createStack(int scap)
+STACK* createStack(int scap)
 {
     STACK *s = malloc(sizeof(STACK));
     s->arr = malloc(scap * sizeof(int));
@@ -102,7 +102,7 @@ void DFS(GRAPH *graph , STACK *s , int v_nr)
 void insertEdges(GRAPH *g , int edgeNr , int nrv)
 {
     int src , dest , i;
-    printf("adauga %d munchii (de la 1 la %d)\n" , edgeNr , nrv);
+    printf("adauga %d munchii (de la 0 la %d)\n" , edgeNr , nrv - 1);
     for (i = 0 ; i < edgeNr ; i++)
     {
         scanf("%d%d" , &src , &dest);

@@ -21,7 +21,7 @@ typedef struct Graph
 GRAPH;
 /// utils
 
-NODE *createNode(int v)
+NODE* createNode(int v)
 {
     NODE *newNode = (NODE *) malloc(sizeof(NODE));
     newNode->data = v;
@@ -190,7 +190,7 @@ void BFS(GRAPH *graph, int start)
     }
 }
 
-int main()
+int main(void)
 {
     int nr_of_vertices , nr_of_edges , starting_vertex;
     
@@ -216,5 +216,6 @@ int main()
     scanf("%d", &starting_vertex);
     printf("parcurgere cu BFS:");
     BFS(graph, starting_vertex);
+
     return 0;
 }
